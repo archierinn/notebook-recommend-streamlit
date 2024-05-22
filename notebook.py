@@ -24,7 +24,9 @@ def ask_gpt3_turbo(message, chat_log=None):
 def main():
     st.title("Notebook Recommendation")
 
-    layar = st_tags(label="Tentukan jenis layar yang Anda inginkan")
+    layar = st.text_input(
+        "(optional) Jenis layar yang Anda inginkan"
+    )
     sistem_operasi = st.multiselect("Sistem operasi", ["Windows", "MacOS", "Linux"])
     prosesor = st.text_input(
         "(optional) Jenis prosesor yang Anda cari"
